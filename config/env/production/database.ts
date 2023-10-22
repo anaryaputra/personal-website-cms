@@ -6,15 +6,12 @@ export default ({ env }) => ({
   connection: {
     client: "postgres",
     connection: {
-      host: config.host,
-      port: config.port,
-      database: config.database,
-      user: config.user,
-      password: config.password,
-      ssl: {
-        rejectUnauthorized: false,
-      },
+      host: env("PGHOST", "127.0.0.1"),
+      port: env.int("PGPORT", 5931),
+      database: env("PGDATABASE", "railway"),
+      user: env("PGUSER", "postgres"),
+      password: env("PGPASSWORD", "password"),
+      ssl: env.bool(true),
     },
-    debug: false,
   },
 });
