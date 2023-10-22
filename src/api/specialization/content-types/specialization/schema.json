@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "specializations",
+  "info": {
+    "singularName": "specialization",
+    "pluralName": "specializations",
+    "displayName": "Specialization",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "highlighted_name": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
