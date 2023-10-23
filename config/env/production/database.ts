@@ -6,12 +6,12 @@ export default ({ env }) => ({
   connection: {
     client: "postgres",
     connection: {
-      host: env("PGHOST", "127.0.0.1"),
-      port: env.int("PGPORT", 5931),
-      database: env("PGDATABASE", "railway"),
-      user: env("PGUSER", "postgres"),
-      password: env("PGPASSWORD", "password"),
-      ssl: env.bool(true),
+      host: process.env.PGHOST,
+      port: process.env.PGPORT,
+      database: process.env.PGDATABASE,
+      user: process.env.PGUSER,
+      password: process.env.PGPASSWORD,
+      ssl: true,
     },
   },
 });
